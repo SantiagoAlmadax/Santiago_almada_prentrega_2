@@ -9,6 +9,7 @@ h2{
     background-color: #9BA7C0;
     text-align: center;
     padding: 20px;
+    margin: 0;
     
 }
 
@@ -16,19 +17,24 @@ h2{
 
 
 .Productos-mas-vendidos{
-    display: flex;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     background-color: #202B41;
     padding: 20px;
+    gap: 20px;
 }
 
 .card{
-    width: 30%;
+    width: 100%;
     background-color: #333;
     color: #fff;
     text-align: center;
-    height: 450px;
+    height: 530px;
     border: 5px solid #424D61;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 10px;
 }
 
 
@@ -40,7 +46,7 @@ h2{
     background-position: center;
 }
 .card__img2{
-    height: 200px;
+    min-height: 200px;
     
     background-image: url(/multimedia/footwear-5408643_1280.jpg);
     background-size: cover;
@@ -48,14 +54,14 @@ h2{
 }
 
 .card__img3{
-    height: 200px;
+    min-height: 200px;
     
     background-image: url(/multimedia/nike-4687824_1280.jpg);
     background-size: cover;
     background-position: center;
 }
 .card__img4{
-    height: 200px;
+    min-height: 200px;
     
     background-image: url(/multimedia/nike-5418992_1280.jpg);
     background-size: cover;
@@ -424,3 +430,8 @@ main{
 /*Fin pagina dos*/
 
 
+@media (max-width: 767px) {
+    .Productos-mas-vendidos {
+      grid-template-columns: 1fr;
+  }
+}
